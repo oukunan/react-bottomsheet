@@ -16,7 +16,7 @@
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "commit": "git cz",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
@@ -62,6 +62,8 @@
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
     "prettier": "2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -80,5 +82,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": "prettier --write --ignore-unknown"
   }
 }
