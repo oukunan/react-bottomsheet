@@ -10,7 +10,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<any> = (args) => (
+const Template: Story<any> = () => (
   <Sheet>
     <Sheet.Overlay />
     Hello
