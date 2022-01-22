@@ -1,17 +1,21 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import BottomSheet from '../src';
+import Sheet from '../src';
 
 const meta: Meta = {
   title: 'Welcome',
-  component: BottomSheet,
+  component: Sheet,
 };
 
 export default meta;
 
-const Template: Story<any> = (args) => <BottomSheet {...args} />;
+const Template: Story<any> = (args) => (
+  <Sheet>
+    <Sheet.Overlay />
+    Hello
+  </Sheet>
+);
 
 export const Default = Template.bind({});
-
 Default.args = {};

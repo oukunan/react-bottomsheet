@@ -1,5 +1,9 @@
-import React from 'react';
+import Sheet, { SheetProps } from './Sheet';
+import SheetOverlay, { SheetOverlayProps } from './SheetOverlay';
 
-export default function BottomSheet() {
-  return <div>This is bottom sheet</div>;
-}
+// Ref: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-894053907
+const SheetCompound = Object.assign(Sheet, { Overlay: SheetOverlay });
+
+export type { SheetProps, SheetOverlayProps };
+
+export default SheetCompound;
